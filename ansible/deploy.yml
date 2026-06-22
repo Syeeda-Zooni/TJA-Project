@@ -1,0 +1,33 @@
+---
+- name: Deploy the blog website
+  hosts: servers
+  become: yes
+
+
+  vars:
+    image_name: "zoonidevops/tja-app"
+    image_tag: latest
+    container_name: "tja-blog"
+    app_port: 80
+
+
+  tasks:
+    - name: Pull the latest docker image
+      community.docker.docker_image:
+        name: "{{ image_name }}:{{ image_tag }}"
+        source: pull
+
+    - name: Stop the existing containers
+      community.docker.docker_image:
+        name: "{{ container_name }}"
+        state: absent
+      ignore_errors: true
+
+    - name: Start the new container
+      community.docker.docker_image:
+        name: "{{ container_name }}"
+        image: "{{ image_name }}:{{ image_tag }}"
+        state: started
+        restart_policy: always
+        ports:
+          - "80:80"
