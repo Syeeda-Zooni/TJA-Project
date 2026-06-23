@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME   = "your-dockerhub-username/tja-app"
+        IMAGE_NAME   = "zoonidevops/tja-app"
         IMAGE_TAG    = "${BUILD_NUMBER}"
         DOCKER_CREDS = credentials('docker-hub-creds')
     }
