@@ -33,7 +33,7 @@ pipeline {
         stage('Deploy with Ansible') {
             steps {
                 sh '''
-                    ansible-playbook -i ~/inventories/dev/hosts.ini \
+                    ansible-playbook -i ~/ansible/inventories/dev/hosts.ini \
                     ~/ansible/playbooks/deploy.yml \
                     --extra-vars "image_tag=${IMAGE_TAG}"
                 '''
