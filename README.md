@@ -107,4 +107,4 @@ Push code to GitHub — Jenkins automatically builds and deploys.
 Zooni | DevOps Fresher | Delhi, India  
 AWS Certified Cloud Practitioner  
 MCA Student — Amity University
-<img width="1920" height="1020" alt="Image" src="https://github.com/user-attachments/assets/26db45b2-7eb6-4227-baa6-206bcc5f600c" />
+<img width="1902" height="928" alt="Image" src="https://github.com/user-attachments/assets/26010e25-42d5-419e-ae7f-35ee05630ecd" />
